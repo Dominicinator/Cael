@@ -2,7 +2,7 @@
 #include "AccelerationFunction.h"
 namespace Cael 
 {
-	enum Integrators { EULER, LEAPFROG };
+	enum Integrators { EXPLICIT_EULER, LEAPFROG, VELOCITY_VERLET };
 	
 
 	class Integrator
@@ -28,6 +28,13 @@ namespace Cael
 	public:
 		LeapFrogIntegrator();
 		virtual ~LeapFrogIntegrator();
+		void update(SimulationState & state, Particle & particle, double & dt);
+	};
+	class VelocityVerletIntegrator : public Integrator
+	{
+	public:
+		VelocityVerletIntegrator();
+		virtual ~VelocityVerletIntegrator();
 		void update(SimulationState & state, Particle & particle, double & dt);
 	};
 

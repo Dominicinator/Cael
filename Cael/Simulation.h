@@ -13,6 +13,7 @@ namespace Cael
 		void initialize();
 
 		SimulationState initialState;
+		double initialEnergy;
 		SimulationState state;
 		
 		double deltaTime;
@@ -30,5 +31,7 @@ namespace Cael
 
 		void runSteps(std::vector<SimulationState> & states, const unsigned int & nSteps, const double & deltaTime);
 		void runPeriod(std::vector<SimulationState> & states, const double & timeLength, const unsigned int & nSteps);
+
+		double getEnergyError();
 	};
 }

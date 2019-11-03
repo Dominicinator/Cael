@@ -5,6 +5,7 @@
 void Cael::Simulation::initialize()
 {
 	state = initialState;
+	initialEnergy = initialState.getTotalEnergy();
 }
 
 Cael::Simulation::Simulation() {}
@@ -67,4 +68,9 @@ void Cael::Simulation::runSteps(std::vector<SimulationState>& states, const unsi
 void Cael::Simulation::runPeriod(std::vector<SimulationState> & states, const double & timeLength, const unsigned int & nSteps)
 {
 	runSteps(states, nSteps, timeLength / nSteps);
+}
+
+double Cael::Simulation::getEnergyError()
+{
+	return ((state.getTotalEnergy() - initialEnergy) / initialEnergy) * 100;
 }

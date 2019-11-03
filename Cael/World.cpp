@@ -15,7 +15,8 @@ Cael::vec2d MousePan::getDelta(Cael::vec2d position)
 
 Camera::Camera()
 {
-	view.setViewport(sf::FloatRect(0.f, 0.f, 1.f, 1.f));
+	//view.setViewport(sf::FloatRect(0.f, 0.f, 2.4f, 1.f));
+	//view.setViewport()
 	view.setCenter(0.f, 0.f);
 }
 
