@@ -76,7 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\SFML\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\SFML\include;G:\dev\cpp includes\eigen</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>SFML_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -90,7 +90,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\SFML\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\SFML\include;G:\dev\cpp includes\eigen</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>SFML_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -135,10 +135,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AccelerationFunction.cpp" />
+    <ClCompile Include="BarnesHutTree.cpp" />
+    <ClCompile Include="Integrator.cpp" />
+    <ClCompile Include="Particle.cpp" />
+    <ClCompile Include="Simulation.cpp" />
+    <ClCompile Include="SimulationState.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="Utility.cpp" />
+    <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="resources\fonts\arial_narrow_7.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AccelerationFunction.h" />
+    <ClInclude Include="BarnesHutTree.h" />
+    <ClInclude Include="Integrator.h" />
+    <ClInclude Include="Particle.h" />
+    <ClInclude Include="Simulation.h" />
+    <ClInclude Include="SimulationState.h" />
+    <ClInclude Include="Utility.h" />
+    <ClInclude Include="World.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resources\solarsystem.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

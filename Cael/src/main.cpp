@@ -1,12 +1,20 @@
 #include <SFML/Graphics.hpp>
-
-#include <SFML/Graphics.hpp>
-
+#include "../World.h"
+#include <iostream>
+//world object should have dimension
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-	sf::CircleShape shape(100.f);
-	shape.setFillColor(sf::Color::Green);
+	//Cael::Simulation simulation;
+	World world;
+	world.simulation.initialState.initFromFile("resources/solarsystem.txt");
+	world.simulation.setIntegrator(Cael::EULER);
+	world.simulation.setMethod(Cael::SQUARE);
+	world.simulation.initialize();
+	world.simulation.deltaTime = 20.0;
+	world.scale = 1e-6;
+	world.camera.followIndex = 1;
+	//std::cin.get();
+	sf::RenderWindow window(sf::VideoMode(800, 800), "SFML works!");
 
 	while (window.isOpen())
 	{
@@ -15,10 +23,13 @@ int main()
 		{
 			if (event.type == sf::Event::Closed)
 				window.close();
-		}
 
+			world.handleEvent(event, window);
+		}
+		world.update(window);
+		world.simulation.step();
 		window.clear();
-		window.draw(shape);
+		window.draw(world);
 		window.display();
 	}
 
