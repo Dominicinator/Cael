@@ -34,6 +34,8 @@ namespace Cael
 		void frameinit(const SimulationState & state);
 		vec2d get(const Particle & particle, const SimulationState & state);
 	};
+
+	AccelerationFunction* getAccelerationFunction(const Methods & method);
 }
 
 

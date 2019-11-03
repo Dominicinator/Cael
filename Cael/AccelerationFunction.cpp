@@ -13,7 +13,7 @@ Cael::SquareAccelerationFunction::SquareAccelerationFunction() {}
 Cael::SquareAccelerationFunction::~SquareAccelerationFunction() {}
 void Cael::SquareAccelerationFunction::frameinit(const SimulationState & state)
 {
-	std::cout << "frameinit square" << std::endl;
+	//std::cout << "frameinit square" << std::endl;
 }
 Cael::vec2d Cael::SquareAccelerationFunction::get(const Particle & particle, const SimulationState & state)
 {
@@ -22,7 +22,6 @@ Cael::vec2d Cael::SquareAccelerationFunction::get(const Particle & particle, con
 	{
 		if (!(&p == &particle))
 		{
-			//vec2d distanceVector = (p.position - particle.position);
 			acceleration += (p.position - particle.position).normalized()*(Cael::Utility::Units::G*p.mass) / ((p.position - particle.position).squaredNorm());
 		}
 	}
@@ -51,4 +50,13 @@ Cael::vec2d Cael::BarnesHutAccelerationFunction::get(const Particle & particle, 
 	return vec2d();
 }
 
-
+Cael::AccelerationFunction * Cael::getAccelerationFunction(const Methods & method)
+{
+	if (method == BARNESHUT)
+	{
+		return new BarnesHutAccelerationFunction();
+	}
+	else {
+		return new SquareAccelerationFunction();
+	}
+}

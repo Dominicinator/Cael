@@ -28,10 +28,7 @@ void Cael::Simulation::setIntegrator(Integrators integrator_)
 void Cael::Simulation::setMethod(Methods method_)
 {
 	delete integrator->accFunc;
-	if (method_ == SQUARE)
-	{
-		integrator->accFunc = new SquareAccelerationFunction();
-	}
+	integrator->accFunc = Cael::getAccelerationFunction(method_);
 }
 
 void Cael::Simulation::restart()
@@ -46,4 +43,28 @@ void Cael::Simulation::step()
 	{
 		integrator->update(state, state.particles[i], deltaTime);
 	}
+}
+
+Cael::SimulationState Cael::Simulation::stepState()
+{
+	step();
+	return state;
+}
+
+void Cael::Simulation::runSteps(std::vector<SimulationState>& states, const unsigned int & nSteps, const double & dt)
+{
+	double tempdt = deltaTime;
+	deltaTime = dt;
+	states.reserve(nSteps);
+	for (unsigned int i = 0; i < nSteps; ++i)
+	{
+		states.push_back(stepState());
+	}
+	restart();
+	deltaTime = tempdt;
+}
+
+void Cael::Simulation::runPeriod(std::vector<SimulationState> & states, const double & timeLength, const unsigned int & nSteps)
+{
+	runSteps(states, nSteps, timeLength / nSteps);
 }

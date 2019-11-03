@@ -23,7 +23,12 @@ namespace Cael
 
 		void setIntegrator(Integrators integrator_);
 		void setMethod(Methods method_);
+
 		void restart();
 		void step();
+		SimulationState stepState();
+
+		void runSteps(std::vector<SimulationState> & states, const unsigned int & nSteps, const double & deltaTime);
+		void runPeriod(std::vector<SimulationState> & states, const double & timeLength, const unsigned int & nSteps);
 	};
 }
