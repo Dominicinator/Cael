@@ -52,6 +52,7 @@ Cael::vec2d Cael::BarnesHutAccelerationFunction::get(const Particle & particle, 
 
 Cael::AccelerationFunction * Cael::getAccelerationFunction(const Methods & method)
 {
+	
 	if (method == BARNESHUT)
 	{
 		return new BarnesHutAccelerationFunction();

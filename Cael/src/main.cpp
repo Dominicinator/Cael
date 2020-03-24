@@ -1,10 +1,11 @@
 #include <SFML/Graphics.hpp>
-#include "../World.h"
+#include "./cael/World.h"
 #include <iostream>
 //world object should have dimension
 
 /*
 //TODO:
+	maybe accfuncs should define their name in class somehow?
 	SimulationStateStepper superclass to wrap integrators? Can use it to define behaviour like calculating energy easier (ie integrate it into accelerationfunction calculation and stuff like that so it doesnt affect performance as much)
 	SimulationState init functions should be moved to simulation
 	frameinit in AccelerationFunction should be called stepinit or initialize or something

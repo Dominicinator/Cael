@@ -135,30 +135,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AccelerationFunction.cpp" />
-    <ClCompile Include="BarnesHutTree.cpp" />
-    <ClCompile Include="Integrator.cpp" />
-    <ClCompile Include="Kepler.cpp" />
-    <ClCompile Include="Particle.cpp" />
-    <ClCompile Include="Simulation.cpp" />
-    <ClCompile Include="SimulationState.cpp" />
+    <ClCompile Include="src\cael\AccelerationFunction.cpp" />
+    <ClCompile Include="src\cael\BarnesHutTree.cpp" />
+    <ClCompile Include="src\cael\Integrator.cpp" />
+    <ClCompile Include="src\cael\Kepler.cpp" />
+    <ClCompile Include="src\cael\Particle.cpp" />
+    <ClCompile Include="src\cael\Simulation.cpp" />
+    <ClCompile Include="src\cael\SimulationState.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="Utility.cpp" />
-    <ClCompile Include="World.cpp" />
+    <ClCompile Include="src\cael\Utility.cpp" />
+    <ClCompile Include="src\cael\World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="resources\fonts\arial_narrow_7.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AccelerationFunction.h" />
-    <ClInclude Include="BarnesHutTree.h" />
-    <ClInclude Include="Integrator.h" />
-    <ClInclude Include="Kepler.h" />
-    <ClInclude Include="Particle.h" />
-    <ClInclude Include="Simulation.h" />
-    <ClInclude Include="SimulationState.h" />
-    <ClInclude Include="Utility.h" />
-    <ClInclude Include="World.h" />
+    <ClInclude Include="src\cael\AccelerationFunction.h" />
+    <ClInclude Include="src\cael\BarnesHutTree.h" />
+    <ClInclude Include="src\cael\Integrator.h" />
+    <ClInclude Include="src\cael\Kepler.h" />
+    <ClInclude Include="src\cael\Particle.h" />
+    <ClInclude Include="src\cael\Simulation.h" />
+    <ClInclude Include="src\cael\SimulationState.h" />
+    <ClInclude Include="src\cael\Utility.h" />
+    <ClInclude Include="src\cael\World.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="resources\solarsystem.txt" />

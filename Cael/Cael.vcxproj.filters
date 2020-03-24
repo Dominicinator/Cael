@@ -18,31 +18,31 @@
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Simulation.cpp">
+    <ClCompile Include="src\cael\AccelerationFunction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Integrator.cpp">
+    <ClCompile Include="src\cael\BarnesHutTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AccelerationFunction.cpp">
+    <ClCompile Include="src\cael\Integrator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Particle.cpp">
+    <ClCompile Include="src\cael\Kepler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Utility.cpp">
+    <ClCompile Include="src\cael\Particle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BarnesHutTree.cpp">
+    <ClCompile Include="src\cael\Simulation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SimulationState.cpp">
+    <ClCompile Include="src\cael\SimulationState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="World.cpp">
+    <ClCompile Include="src\cael\Utility.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Kepler.cpp">
+    <ClCompile Include="src\cael\World.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -50,31 +50,31 @@
     <Font Include="resources\fonts\arial_narrow_7.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Simulation.h">
+    <ClInclude Include="src\cael\AccelerationFunction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Integrator.h">
+    <ClInclude Include="src\cael\BarnesHutTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AccelerationFunction.h">
+    <ClInclude Include="src\cael\Integrator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Particle.h">
+    <ClInclude Include="src\cael\Kepler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Utility.h">
+    <ClInclude Include="src\cael\Particle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BarnesHutTree.h">
+    <ClInclude Include="src\cael\Simulation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SimulationState.h">
+    <ClInclude Include="src\cael\SimulationState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="World.h">
+    <ClInclude Include="src\cael\Utility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Kepler.h">
+    <ClInclude Include="src\cael\World.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
