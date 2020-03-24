@@ -23,8 +23,12 @@
 	Collision:
 		Do it like I did before where a list of collisions is collected every step and they are all handled at the same time at the end of the step
 		could later implement actual simulation of the collision... somehow, look up how to do it, look at SPH maybe? greenleaf
-
-	should implement a way to handle particles with different rules; ie some particles shouldnt contribute to total N-body force (ie rings and stuff maybe)
+	
+	Solar system formation
+		should implement a way to handle particles with different rules; ie some particles shouldnt contribute to total N-body force (ie rings and stuff maybe)
+		Star formation with radiation pressure calculation to drive density changes in protoplanetary discs
+		research number of particles needed for good simulation
+		find ways to do it real fast
 	implement way to do solar system formation out of various materials, (ie make Planet or Body a subclass of particle with more complex data like composition and temperature)
 	add ui and stuff to Cael::Visualization
 	implement keplerian stuff, maybe patched conics
@@ -35,9 +39,13 @@
 	//https://math.stackexchange.com/questions/234263/procedure-for-adaptive-step-size-for-runge-kutta-4
 	//https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods
 	//https://scicomp.stackexchange.com/questions/19020/applying-the-runge-kutta-method-to-second-order-odes
+	//https://www.youtube.com/watch?v=qKp1M4T6z24
+	//https://www.youtube.com/watch?v=MHrUeGV1DtM
+	//https://www.youtube.com/watch?v=2kQls0t-tCU
 */
 int main()
 {
+	//Cael::
 	//Cael::Simulation simulation;
 	World world;
 	/*
@@ -81,8 +89,8 @@ int main()
 
 			world.handleEvent(event, window);
 		}
-		world.update(window);
 		world.simulation.step();
+		world.update(window); //note: world update needs to happen after simulation step to avoid desync with simulation and camera position and stuff like that
 		energyError.setString(std::to_string(world.simulation.getEnergyError()) + "%");
 		//std::cout << "Energy error: " << world.simulation.getEnergyError() << "%\n";
 		window.clear();

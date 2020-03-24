@@ -7,7 +7,7 @@ Cael::Integrator::Integrator() {}
 Cael::Integrator::~Integrator() { delete accFunc; }
 void Cael::Integrator::update(SimulationState & state, Particle & particle, double & dt) {}
 /*================================*/
-//   (FORWARD) EULER INTEGRATOR
+//   EXPLICIT EULER INTEGRATOR
 /*================================*/
 Cael::EulerIntegrator::EulerIntegrator() {}
 Cael::EulerIntegrator::~EulerIntegrator() {}

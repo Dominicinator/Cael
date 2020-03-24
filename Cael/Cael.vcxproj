@@ -138,6 +138,7 @@
     <ClCompile Include="AccelerationFunction.cpp" />
     <ClCompile Include="BarnesHutTree.cpp" />
     <ClCompile Include="Integrator.cpp" />
+    <ClCompile Include="Kepler.cpp" />
     <ClCompile Include="Particle.cpp" />
     <ClCompile Include="Simulation.cpp" />
     <ClCompile Include="SimulationState.cpp" />
@@ -152,6 +153,7 @@
     <ClInclude Include="AccelerationFunction.h" />
     <ClInclude Include="BarnesHutTree.h" />
     <ClInclude Include="Integrator.h" />
+    <ClInclude Include="Kepler.h" />
     <ClInclude Include="Particle.h" />
     <ClInclude Include="Simulation.h" />
     <ClInclude Include="SimulationState.h" />
